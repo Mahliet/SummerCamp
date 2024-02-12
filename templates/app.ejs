@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Application</title>
+</head>
+<script>
+	function confirm_sub(){
+		return window.confirm("Are you sure you want to submit your application? You will not be able to change your information once submitted.");
+	}
+</script>
+
+<body >
+	<h2>Application</h2>
+	
+	<form onsubmit = "return confirm_sub()" action= "/app" method="post">
+		<fieldset>
+
+			<strong>Name:</strong> <input type="text" name="name"/>
+			<strong>Email Address:</strong> <input type="email" name="email"><br>
+			<br>
+            <strong>GPA:</strong> <input type="text" name="gpa"/><br>
+			<br>
+			<strong>Background Information: </strong><br>
+			<textarea rows="5" cols="80" name="background"></textarea>
+
+		</fieldset>
+
+		<br>
+		<input type="reset" value = "Reset"/>
+		<input type="submit" value="Submit Application"/>
+	</form>
+
+    <hr>
+    <a href="/">HOME</a>
+</body>
+</html>
